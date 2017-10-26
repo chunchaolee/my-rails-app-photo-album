@@ -1,0 +1,19 @@
+<div class="container">
+  <%= image_tag @photo.file_location.url, size: 'auto' ,class: "image-thumbnail" %>
+  <table class="table table-bordered table-condensed ">
+    <tr>
+      <th>Name</th>
+      <th>Date</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td><%= @photo.title %></td>
+      <td><%= @photo.date %></td>
+      <td><%= simple_format(@photo.description) %></td>
+    </tr>
+  </table>
+  <br />
+  <div class="container form-group">
+    <%= link_to "<span class='glyphicon glyphicon-home'></span>  Back to Home Page".html_safe, photos_path, class: "btn btn-primary" %>
+  </div>
+</div>
